@@ -1,0 +1,149 @@
+{
+    "doctors": [
+      {
+        "id": "D001",
+        "name": "Dr. Shafiqul Islam",
+        "education": "MBBS, FCPS",
+        "working_place": "Dhaka Medical",
+        "speciality": "Cardiology",
+        "experience": "10+ years",
+        "registration_number": "REG001",
+        "availability": ["Sunday", "Monday", "Wednesday", "Thursday", "Saturday"],
+        "consultation_fee": "500 Taka",
+        "image": "https://i.ibb.co/HvL7PBt/8332410.png"
+      },
+      {
+        "id": "D002",
+        "name": "Dr. Fariha Rahman",
+        "education": "MBBS, DCP",
+        "working_place": "Apollo Hospital",
+        "speciality": "Dermatology",
+        "experience": "8+ years",
+        "registration_number": "REG002",
+        "availability": ["Monday", "Thursday", "Saturday"],
+        "consultation_fee": "600 Taka",
+        "image": "https://i.ibb.co/hFfQncTL/9109563.jpg"
+      },
+      {
+        "id": "D003",
+        "name": "Dr. Abdul Karim",
+        "education": "MBBS, MD",
+        "working_place": "Shahid Suhrawardy Hospital",
+        "speciality": "Neurology",
+        "experience": "15+ years",
+        "registration_number": "REG003",
+        "availability": ["Sunday", "Wednesday", "Friday"],
+        "consultation_fee": "700 Taka",
+        "image": "https://i.ibb.co/5g6fkG2K/8.jpg"
+      },
+      {
+        "id": "D004",
+        "name": "Dr. Nargis Sultana",
+        "education": "MBBS, MRCP",
+        "working_place": "Labaid Hospital",
+        "speciality": "Gastroenterology",
+        "experience": "12+ years",
+        "registration_number": "REG004",
+        "availability": ["Monday", "Tuesday", "Saturday"],
+        "consultation_fee": "550 Taka",
+        "image": "https://i.ibb.co/ymG8R3qQ/7.jpg"
+      },
+      {
+        "id": "D005",
+        "name": "Dr. Rubina Chowdhury",
+        "education": "MBBS, FCPS",
+        "working_place": "Bangladesh Medical College",
+        "speciality": "Pediatrics",
+        "experience": "9+ years",
+        "registration_number": "REG005",
+        "availability": ["Monday", "Thursday", "Saturday"],
+        "consultation_fee": "450 Taka",
+        "image": "https://i.ibb.co/FkwtQRdW/1.webp"
+      },
+      {
+        "id": "D006",
+        "name": "Dr. Jamil Ahmed",
+        "education": "MBBS, MD",
+        "working_place": "United Hospital",
+        "speciality": "Endocrinology",
+        "experience": "13+ years",
+        "registration_number": "REG006",
+        "availability": ["Sunday", "Wednesday", "Saturday"],
+        "consultation_fee": "650 Taka",
+        "image": "https://i.ibb.co/1GwKTXft/1.jpg"
+      },
+      {
+        "id": "D007",
+        "name": "Dr. Noman Ali",
+        "education": "MBBS, FCPS",
+        "working_place": "Medinova Medical",
+        "speciality": "Orthopedics",
+        "experience": "11+ years",
+        "registration_number": "REG007",
+        "availability": ["Sunday", "Monday", "Thursday", "Saturday"],
+        "consultation_fee": "550 Taka",
+        "image": "https://i.ibb.co/nMwXjyFV/2.jpg"
+      },
+      {
+        "id": "D008",
+        "name": "Dr. Marium Begum",
+        "education": "MBBS, DGO",
+        "working_place": "Evercare Hospital",
+        "speciality": "Obstetrics & Gynecology",
+        "experience": "14+ years",
+        "registration_number": "REG008",
+        "availability": ["Monday", "Wednesday", "Friday"],
+        "consultation_fee": "700 Taka",
+        "image": "https://i.ibb.co/gFcT6vmd/1.jpg"
+      },
+      {
+        "id": "D009",
+        "name": "Dr. Mizanur Rahman",
+        "education": "MBBS, FCPS",
+        "working_place": "Square Hospital",
+        "speciality": "Psychiatry",
+        "experience": "16+ years",
+        "registration_number": "REG009",
+        "availability": ["Tuesday", "Thursday", "Saturday"],
+        "consultation_fee": "800 Taka",
+        "image": "https://i.ibb.co/JwYwSYSN/2.jpg"
+      },
+      {
+        "id": "D010",
+        "name": "Dr. Rashedul Alam",
+        "education": "MBBS, MS",
+        "working_place": "Green Life Hospital",
+        "speciality": "Urology",
+        "experience": "17+ years",
+        "registration_number": "REG010",
+        "availability": ["Monday", "Wednesday", "Saturday"],
+        "consultation_fee": "750 Taka",
+        "image": "https://i.ibb.co/BVFQSg39/Black-and-White-Simple-Illustrative-Family-Doctor-Logo.jpg"
+      },
+      {
+        "id": "D011",
+        "name": "Dr. Rina Begum",
+        "education": "MBBS, FCPS",
+        "working_place": "Shahid Suhrawardy Hospital",
+        "speciality": "Ophthalmology",
+        "experience": "20+ years",
+        "registration_number": "REG011",
+        "availability": ["Sunday", "Tuesday", "Thursday"],
+        "consultation_fee": "500 Taka",
+        "image": "https://i.ibb.co/Q7HjNWgP/2.jpg"
+      },
+      {
+        "id": "D012",
+        "name": "Dr. Sazida Rahman",
+        "education": "MBBS, FRCS",
+        "working_place": "Bangladesh Medical College",
+        "speciality": "Plastic Surgery",
+        "experience": "18+ years",
+        "registration_number": "REG012",
+        "availability": ["Monday", "Wednesday", "Saturday"],
+        "consultation_fee": "900 Taka",
+        "image": "https://i.ibb.co/d4dxDRcJ/1.jpg"
+      }
+    ]
+  }
+  
