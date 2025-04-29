@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className='w-10/12 mx-auto py-8 bg-[linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,1))] border border-3-white shadow sm mt-4 rounded-xl mb-4'>
+        <div className='w-10/12 mx-auto py-8 bg-[linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,1))]  border-3 border-white shadow sm mt-4 rounded-xl mb-4'>
             <h1 className='text-4xl font-semibold text-center'>
                 Dependable Care, Backed by Trusted <br />Professionals.
             </h1>
@@ -23,7 +23,7 @@ const Banner = () => {
                 </div>
             </div>
             {/* Banner section */}
-            <div className="banner-container flex gap-4 justify-between items-center">
+            <div className="banner-container flex gap-4 justify-between items-center w-10/12 mx-auto">
                 <div className="left">
                     <img src="/public/banner-img-1.png" alt="" />
                 </div>
