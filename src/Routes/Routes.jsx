@@ -29,6 +29,8 @@ export let router = createBrowserRouter([
       },
       {
         path:'/blogs',
+        hydrateFallbackElement: <Spinner></Spinner>,
+        loader: ()=>fetch('../../public/Blog.json'),
         Component: Blog,
       },
       {

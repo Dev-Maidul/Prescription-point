@@ -1,15 +1,5 @@
 
 
-====================================================
-
-====================================================
-🔚 Footer
-Visible on all pages except error routes
-Includes:
-Centered Logo
-Navigation Menus (as per Figma)
-3 Social Icons (redirect to developer's personal profiles)
-====================================================
 
 ====================================================
 
