@@ -1,46 +1,24 @@
 
-
-
-====================================================
-
-➤ Success Section
-Display 4 square cards (as per Figma) with:
-Icon
-Number
-Card Title
-
-
 ====================================================
 Challenge Requirements
 📊 Recharts
 Visualize appointment fees using Recharts (as per Figma)
 Canceling appointments should update the chart
 If no appointments exist, do not show chart
-🔢 Counting Animation
-Use react-countup for counting animation on the Homepage
-➤ Logo & Title
-Add Site Logo & Website Title
+
+
+
 ➤ Invalid Dynamic Routes
 If invalid route visited (e.g., /doctors/invalid-id), show error message
 ➤ Redirection & Loading States
+
 Show a loading animation on every route change
 App must not crash on page reload
-Show fallback loader during data fetch on any page reload
+
 ====================================================
-✨ Optional Features
-➤ Validate Booking Based on Availability
-If today’s date doesn’t match doctor’s availability:
-Show “Doctor is unavailable today”
-Show “Unavailable” badge on doctor cards
-➤ Dynamic Title using useLocation()
-Change title dynamically:
-Booking Page → Booking
-Doctor Details → Doctor’s Name
-Do not use third-party NPM packages for this feature
+
 ✅ Notes
 Have to work with the assigned Category.
-Minimum 10 Github Commits
-No Lorem Ipsum
-Image / video / resources will be relevant to the site
+
 Make your project responsive
 Happy Coding! 🚀
