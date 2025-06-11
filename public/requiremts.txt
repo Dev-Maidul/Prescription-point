@@ -19,13 +19,7 @@ Icon
 Number
 Card Title
 👨‍⚕️ Doctor Details Page
-Page Info Card titled “Doctor’s Profile Details” with a slogan (as per Figma)
-Doctor Info Section:
-Left-aligned image
-Name, Education, Specialities, Designation, Workplace, Fee
-Availability Section (array of days)
-Appointment Card includes:
-Availability Badge
+
 “Book Now” Button
 ➤ Book Now Button Behavior
 If user has not booked:

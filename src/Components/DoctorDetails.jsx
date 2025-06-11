@@ -1,6 +1,7 @@
 import React from "react";
 import { RiRegisteredLine } from "react-icons/ri";
 import { Link, useLoaderData, useParams } from "react-router";
+import { addAppointment } from "../utlities/utlities";
 
 const DoctorDetails = () => {
   const data = useLoaderData();
@@ -23,7 +24,9 @@ const DoctorDetails = () => {
     speciality,
     working_place,
   } = SingleDoctor;
-
+ const handleAppointment=()=>{
+    addAppointment(SingleDoctor);
+ }
   return (
     <div className="bg-[#f7f7f7] min-h-screen py-10 px-4">
       {/* Header */}
@@ -91,7 +94,7 @@ const DoctorDetails = () => {
             Due to high patient volume, we are currently accepting appointments for today only.
           </span>
         </div>
-        <Link to={`/bookings/${id}`}><button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-full transition cursor-pointer">
+        <Link to={`/bookings/${id}`}><button onClick={handleAppointment} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-full transition cursor-pointer">
           Book Appointment Now
         </button></Link>
       </div>
