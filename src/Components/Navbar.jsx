@@ -49,10 +49,10 @@ const Navbar = () => {
             
           </ul>
         </div>
-        <Link to='/'>
+        <Link className="hidden md:block" to='/'>
         <div className="flex gap-2 items-center justify-center cursor-pointer">
         <img src="/public/logo.png" alt="" />
-        <a className="font-bold ml-2 text-xl">Phudo</a>
+        <p className="font-bold ml-2 text-xl">Prescription Point</p>
         </div>
         </Link>
       </div>

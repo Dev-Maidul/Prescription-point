@@ -6,7 +6,15 @@ import Home from "../Pages/Home/Home";
 import Booking from "../Pages/Bookings/Booking";
 import Blog from "../Pages/Blogs/Blog";
 import Contact from "../Pages/Contact/Contact";
-
+import Spinner from '../Components/Spinner';
+const homeLoader = async () => {
+  const response = await fetch('Doctor.json');
+  if (!response.ok) {
+    throw new Error('error');
+  }
+  const data = await response.json();
+  return data;  
+};
 export let router = createBrowserRouter([
   {
     path: "/",
@@ -14,6 +22,8 @@ export let router = createBrowserRouter([
     children:[
       {
         index: true,
+        hydrateFallbackElement: <Spinner></Spinner>,
+        loader: homeLoader,
         Component: Home,
       },
       {
