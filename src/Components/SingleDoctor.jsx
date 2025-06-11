@@ -1,5 +1,6 @@
 import React from "react";
 import { RiRegisteredLine } from "react-icons/ri";
+import { Link } from "react-router";
 
 const SingleDoctor = ({ doctor }) => {
   const {
@@ -9,7 +10,11 @@ const SingleDoctor = ({ doctor }) => {
     image,
     registration_number,
     education,
+    id
   } = doctor;
+  const today = new Date().toLocaleString("en-US", { weekday: "long" });
+  const isAvailableToday= availability.includes(today);
+  console.log(isAvailableToday);
   return (
     <div className="card bg-base-100 shadow-sm p-6">
       <figure>
@@ -20,8 +25,8 @@ const SingleDoctor = ({ doctor }) => {
         />
       </figure>
       <div className="flex gap-2 items-center py-4">
-        <button className="btn btn-outline btn-accent">
-          {availability && <p>Available</p>}
+        <button className={`btn btn-outline ${isAvailableToday ? "btn-success" : "btn-error"}`}>
+          {isAvailableToday ? "Available Today" : "Not Available Today"}
         </button>
         <button className="btn btn-outline btn-info">
           {experience} experience
@@ -37,7 +42,7 @@ const SingleDoctor = ({ doctor }) => {
           <h1 className="flex text-xl gap-1 items-center"><RiRegisteredLine size={26}/>Reg No: {registration_number} </h1>
           
         </div>
-        <button className="btn btn-outline btn-primary text-xl font-bold mt-2">View Details</button>
+        <Link to={`/details/${id}`}><button className="btn btn-outline btn-primary text-xl font-bold mt-2">View Details</button></Link>
       </div>
     </div>
   );

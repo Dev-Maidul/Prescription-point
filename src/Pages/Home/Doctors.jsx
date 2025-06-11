@@ -14,7 +14,7 @@ const Doctors = ({doctors}) => {
             setDisplayDoctors(doctors.slice(0,6));
         }
     },[doctors,showAll]);
-    console.log(doctors);
+    // console.log(doctors);
     return (
         <div className='w-10/12 mx-auto text-center py-12 mt-12'>
             <h1 className='font-bold text-3xl text-center'>Our Best Doctors</h1>

@@ -7,6 +7,7 @@ import Booking from "../Pages/Bookings/Booking";
 import Blog from "../Pages/Blogs/Blog";
 import Contact from "../Pages/Contact/Contact";
 import Spinner from '../Components/Spinner';
+import DoctorDetails from "../Components/DoctorDetails";
 const homeLoader = async () => {
   const response = await fetch('Doctor.json');
   if (!response.ok) {
@@ -31,8 +32,16 @@ export let router = createBrowserRouter([
         Component: Blog,
       },
       {
-        path:'/bookings',
+        path:'/bookings/:id',
+        hydrateFallbackElement: <Spinner></Spinner>,
+        loader: ()=>fetch('../../public/Doctor.json'),
         Component: Booking,
+      },
+      {
+        path:'/details/:id',
+        Component:DoctorDetails,
+        hydrateFallbackElement: <Spinner></Spinner>,
+        loader: ()=>fetch('../../public/Doctor.json')
       },
       {
         path:'/contact',
