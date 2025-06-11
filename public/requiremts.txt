@@ -18,31 +18,10 @@ Display 4 square cards (as per Figma) with:
 Icon
 Number
 Card Title
-👨‍⚕️ Doctor Details Page
 
-“Book Now” Button
-➤ Book Now Button Behavior
-If user has not booked:
-Create an appointment
-Show a success toast with doctor name
-Redirect to Booking Page
-If user already booked:
-Show error toast
-Do not proceed
+
 ====================================================
-📅 Bookings Page
-Show all booked appointments in 1-column format (as per Figma)
-Each appointment card includes:
 
-Doctor Name
-Fee
-Education
-Speciality
-“Cancel Appointment” Button
-If no appointments found:
-Show heading & a button to navigate to Homepage
-Appointment state should persist on page reload ( USE LOCALSTORAGE )
-Cancel button removes the appointment
 ====================================================
 📝 Blogs Page
 Design a blogs page to answer the following:

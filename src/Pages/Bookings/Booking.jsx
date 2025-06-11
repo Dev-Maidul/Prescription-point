@@ -1,6 +1,7 @@
-// Booking.jsx
 import React, { useEffect, useState } from "react";
 import { getAppointment, removeAppointment } from "../../utlities/utlities";
+import { Link } from "react-router";
+import Swal from "sweetalert2";
 
 const Booking = () => {
   const [displayAppointment, setDisplayAppointment] = useState([]);
@@ -11,10 +12,45 @@ const Booking = () => {
   }, []);
 
   const handleCancelAppointment = (id) => {
-    if (window.confirm('Are you sure you want to cancel this appointment?')) {
-      removeAppointment(id);
-      setDisplayAppointment(getAppointment());
-    }
+    const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: "btn btn-success",
+    cancelButton: "btn btn-danger"
+  },
+  buttonsStyling: false
+});
+swalWithBootstrapButtons.fire({
+  title: "Are you sure to cancel Appointment?",
+  text: "You won't be able to revert this!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonText: "Yes, delete it!",
+  cancelButtonText: "No, cancel!",
+  reverseButtons: true
+}).then((result) => {
+  if (result.isConfirmed) {
+    swalWithBootstrapButtons.fire({
+      title: "Canceled Appointment!",
+      text: "Your appointment has been cancel.",
+      icon: "success"
+    });
+    removeAppointment(id);
+    setDisplayAppointment(getAppointment());
+  } else if (
+    /* Read more about handling dismissals below */
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons.fire({
+      title: "Cancelled",
+      text: "Your imaginary file is safe :)",
+      icon: "error"
+    });
+  }
+});
+    // if (window.confirm("Are you sure you want to cancel this appointment?")) {
+    //   removeAppointment(id);
+    //   setDisplayAppointment(getAppointment());
+    // }
   };
 
   return (
@@ -27,14 +63,28 @@ const Booking = () => {
 
       <div className="rounded-xl shadow p-4 mx-auto w-full py-8 mt-4 mb-4">
         {displayAppointment.length === 0 ? (
-          <p className="text-center text-gray-500">No appointments found</p>
+          <div className="text-center">
+            <h1 className="text-warning font-bold text-4xl">
+              No appointments found
+            </h1>
+            <Link to="/">
+              <button className="btn btn-active btn-primary mt-4 mx-auto block">
+                Make an Appointment Now
+              </button>
+            </Link>
+          </div>
         ) : (
           displayAppointment.map((appointment) => (
-            <div key={appointment.id} className="bg-white rounded-lg shadow p-6 mb-4">
+            <div
+              key={appointment.id}
+              className="bg-white rounded-lg shadow p-6 mb-4"
+            >
               <div className="flex justify-between items-start">
                 <div>
                   <h3 className="text-lg font-semibold">{appointment.name}</h3>
-                  <p className="text-gray-500 text-sm">{appointment.education}</p>
+                  <p className="text-gray-500 text-sm">
+                    {appointment.education}
+                  </p>
                 </div>
                 <p className="text-gray-500 text-sm">
                   Appointment Fee : {appointment.consultation_fee} Taka + Vat
