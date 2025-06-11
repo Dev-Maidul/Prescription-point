@@ -1,26 +1,24 @@
-import {
-  createBrowserRouter,
-} from "react-router";
+import { createBrowserRouter } from "react-router";
 import Layout from "../Pages/Layout/Layout";
 import Home from "../Pages/Home/Home";
 import Booking from "../Pages/Bookings/Booking";
 import Blog from "../Pages/Blogs/Blog";
-import Contact from "../Pages/Contact/Contact";
-import Spinner from '../Components/Spinner';
+import Spinner from "../Components/Spinner";
 import DoctorDetails from "../Components/DoctorDetails";
+import ErrorLayout from "../Pages/Layout/ErrorLayout";
 const homeLoader = async () => {
-  const response = await fetch('Doctor.json');
+  const response = await fetch("Doctor.json");
   if (!response.ok) {
-    throw new Error('error');
+    throw new Error("error");
   }
   const data = await response.json();
-  return data;  
+  return data;
 };
 export let router = createBrowserRouter([
   {
     path: "/",
     Component: Layout,
-    children:[
+    children: [
       {
         index: true,
         hydrateFallbackElement: <Spinner></Spinner>,
@@ -28,26 +26,27 @@ export let router = createBrowserRouter([
         Component: Home,
       },
       {
-        path:'/blogs',
+        path: "/blogs",
         hydrateFallbackElement: <Spinner></Spinner>,
-        loader: ()=>fetch('../../public/Blog.json'),
+        loader: () => fetch("../../public/Blog.json"),
         Component: Blog,
       },
       {
-        path:'/bookings',
+        path: "/bookings",
         Component: Booking,
       },
       {
-        path:'/details/:id',
-        Component:DoctorDetails,
+        path: "/details/:id",
+        Component: DoctorDetails,
         hydrateFallbackElement: <Spinner></Spinner>,
-        loader: ()=>fetch('../../public/Doctor.json')
+        loader: () => fetch("../../public/Doctor.json"),
       },
-      {
-        path:'/contact',
-        Component: Contact,
-      },
-    ]
+      
+      
+    ],
   },
-  
+  {
+        path: "*",
+        element: <ErrorLayout></ErrorLayout>,
+      },
 ]);

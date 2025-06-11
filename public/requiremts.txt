@@ -11,23 +11,6 @@ Card Title
 
 
 ====================================================
-
-====================================================
-📝 Blogs Page
-Design a blogs page to answer the following:
-
-What is useState and how does it work in React?
-What is the purpose of useEffect in React?
-What is a custom hook in React and when should you use one?
-Difference between controlled and uncontrolled components? Which one is better?
-Tell us something about useFormStatus() (explore and explain)
-====================================================
-❌ Error Page
-Displayed for all invalid routes (e.g., /contacts)
-Navbar should be visible
-Footer should not be visible
-Button to redirect users to Homepage
-====================================================
 Challenge Requirements
 📊 Recharts
 Visualize appointment fees using Recharts (as per Figma)

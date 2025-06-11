@@ -54,7 +54,7 @@ swalWithBootstrapButtons.fire({
   };
 
   return (
-    <div className="py-12">
+    <div className="py-12 w-10/12 mx-auto">
       <h1 className="font-bold text-4xl text-center">My Today Appointments</h1>
       <p className="text-center py-2">
         Our platform connects you with verified, experienced doctors across
