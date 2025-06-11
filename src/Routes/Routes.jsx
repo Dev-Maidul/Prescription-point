@@ -32,9 +32,7 @@ export let router = createBrowserRouter([
         Component: Blog,
       },
       {
-        path:'/bookings/:id',
-        hydrateFallbackElement: <Spinner></Spinner>,
-        loader: ()=>fetch('../../public/Doctor.json'),
+        path:'/bookings',
         Component: Booking,
       },
       {

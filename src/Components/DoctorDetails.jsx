@@ -94,9 +94,9 @@ const DoctorDetails = () => {
             Due to high patient volume, we are currently accepting appointments for today only.
           </span>
         </div>
-        <Link to={`/bookings/${id}`}><button onClick={handleAppointment} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-full transition cursor-pointer">
+        <button onClick={handleAppointment} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-full transition cursor-pointer">
           Book Appointment Now
-        </button></Link>
+        </button>
       </div>
     </div>
   );

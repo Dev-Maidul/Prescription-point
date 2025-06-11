@@ -14,7 +14,7 @@ const SingleDoctor = ({ doctor }) => {
   } = doctor;
   const today = new Date().toLocaleString("en-US", { weekday: "long" });
   const isAvailableToday= availability.includes(today);
-  console.log(isAvailableToday);
+  // console.log(isAvailableToday);
   return (
     <div className="card bg-base-100 shadow-sm p-6">
       <figure>
