@@ -3,7 +3,7 @@ import { getAppointment, removeAppointment } from "../../utlities/utlities";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell } from 'recharts';
-
+import { motion } from "motion/react"
 // Custom shape for bars
 const getPath = (x, y, width, height) => {
   return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3}
@@ -71,7 +71,10 @@ const Booking = () => {
   };
 
   return (
-    <div className="py-12 w-10/12 mx-auto">
+    <motion.div
+    initial={{ scale: 0 }} animate={{ scale: 1 ,transition: { duration: 1 }}}
+    
+    className="py-12 w-10/12 mx-auto">
       {/* Chart Section */}
       <div className="mb-12">
         <h2 className="text-2xl font-bold mb-4 text-center">Doctor Appointments Overview</h2>
@@ -167,7 +170,7 @@ const Booking = () => {
           ))
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

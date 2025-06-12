@@ -1,10 +1,6 @@
 
 ====================================================
-Challenge Requirements
-📊 Recharts
-Visualize appointment fees using Recharts (as per Figma)
-Canceling appointments should update the chart
-If no appointments exist, do not show chart
+
 
 
 

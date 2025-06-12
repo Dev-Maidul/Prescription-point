@@ -1,11 +1,19 @@
-import React from 'react';
 
+import React from 'react';
+import { motion } from "motion/react"
 const Banner = () => {
     return (
-        <div className='w-10/12 mx-auto py-8 bg-[linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,1))]  border-3 border-white shadow sm mt-4 rounded-xl mb-4'>
-            <h1 className='text-4xl font-semibold text-center'>
+        <div className='w-10/12 mx-auto bg-[linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,1))]  border-3 border-white shadow sm rounded-xl mb-4 py-12 mt-18'>
+            <motion.h1
+             animate={
+            {
+                color:['#ff5733','#33ff33','#8a33ff'],
+                transition:{duration:4,repeat:Infinity}
+            }
+             }
+            className='text-4xl font-semibold text-center'>
                 Dependable Care, Backed by Trusted <br />Professionals.
-            </h1>
+            </motion.h1>
             <p className='py-2 text-center text-gra font-thin'>
                 Our platform connects you with verified, experienced doctors across various specialties — all at your convenience. Whether it's a
                 <br />routine checkup or urgent consultation, book appointments in minutes and receive quality care you can trust. 

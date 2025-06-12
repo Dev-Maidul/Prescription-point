@@ -4,6 +4,7 @@ import star from '../assets/success-review.png'
 import staff from '../assets/success-staffs.png'
 import patient from '../assets/success-patients.png'
 import CountUp from "react-countup";
+import { motion } from "motion/react"
 const Success = () => {
   return (
     <div className="w-10/12 mx-auto py-12 mt-4 text-center">
@@ -15,12 +16,16 @@ const Success = () => {
         various specialties — all at your convenience.{" "}
       </p>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 py-8">
-        <div className="bg-white p-14 rounded-3xl">
+        <motion.div
+        whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.95 }}
+  onHoverStart={() => console.log('hover started!')}
+        className="bg-white p-14 rounded-3xl">
             <img className="" src={review} alt="" />
             <h1 className="font-bold text-6xl text-left py-2"><CountUp end={199}
             duration={3} />+</h1>
             <h4 className="text-xl text-gray-500 mt-2 text-left"> Total Doctors</h4>
-        </div>
+        </motion.div>
         <div className="bg-white p-14 rounded-3xl">
             <img className="" src={star} alt="" />
             <h1 className="font-bold text-6xl text-left py-2"><CountUp end={467}

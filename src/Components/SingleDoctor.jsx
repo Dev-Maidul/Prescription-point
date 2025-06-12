@@ -1,7 +1,7 @@
 import React from "react";
 import { RiRegisteredLine } from "react-icons/ri";
 import { Link } from "react-router";
-
+import { motion } from "motion/react"
 const SingleDoctor = ({ doctor }) => {
   const {
     name,
@@ -16,7 +16,11 @@ const SingleDoctor = ({ doctor }) => {
   const isAvailableToday= availability.includes(today);
   // console.log(isAvailableToday);
   return (
-    <div className="card bg-base-100 shadow-sm p-6">
+    <motion.div
+    whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.95 }}
+  onHoverStart={() => console.log('hover started!')}
+    className="card bg-base-100 shadow-sm p-6 m-6">
       <figure>
         <img
           className="w-full h-[250px] rounded-2xl"
@@ -44,7 +48,7 @@ const SingleDoctor = ({ doctor }) => {
         </div>
         <Link to={`/details/${id}`}><button className="btn btn-outline btn-primary text-xl font-bold mt-2">View Details</button></Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
