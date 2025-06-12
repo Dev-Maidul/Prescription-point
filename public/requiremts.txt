@@ -6,9 +6,8 @@
 
 ➤ Invalid Dynamic Routes
 If invalid route visited (e.g., /doctors/invalid-id), show error message
-➤ Redirection & Loading States
 
-Show a loading animation on every route change
+
 App must not crash on page reload
 
 ====================================================
