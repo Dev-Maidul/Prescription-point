@@ -5,8 +5,7 @@ A **React-based web application** for scheduling and managing doctor appointment
 ---
 
 ## 🚀 Live URL
-
-🔗 
+🔗 https://prescription-point.netlify.app/
 
 ---
 ## ✨ Features

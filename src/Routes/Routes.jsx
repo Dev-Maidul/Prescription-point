@@ -7,7 +7,7 @@ import Spinner from "../Components/Spinner";
 import DoctorDetails from "../Components/DoctorDetails";
 import ErrorLayout from "../Pages/Layout/ErrorLayout";
 const homeLoader = async () => {
-  const response = await fetch("Doctor.json");
+  const response = await fetch("/Doctor.json");
   if (!response.ok) {
     throw new Error("error");
   }
@@ -21,14 +21,14 @@ export let router = createBrowserRouter([
     children: [
       {
         index: true,
-        hydrateFallbackElement: <Spinner></Spinner>,
+        hydrateFallbackElement: <Spinner />,
         loader: homeLoader,
         Component: Home,
       },
       {
         path: "/blogs",
-        hydrateFallbackElement: <Spinner></Spinner>,
-        loader: () => fetch("../../public/Blog.json"),
+        hydrateFallbackElement: <Spinner />,
+        loader: () => fetch("/Blog.json").then(res => res.json()),
         Component: Blog,
       },
       {
@@ -38,15 +38,13 @@ export let router = createBrowserRouter([
       {
         path: "/details/:id",
         Component: DoctorDetails,
-        hydrateFallbackElement: <Spinner></Spinner>,
-        loader: () => fetch("../../public/Doctor.json"),
+        hydrateFallbackElement: <Spinner />,
+        loader: () => fetch("/Doctor.json").then(res => res.json()),
       },
-      
-      
     ],
   },
   {
-        path: "*",
-        element: <ErrorLayout></ErrorLayout>,
-      },
+    path: "*",
+    element: <ErrorLayout />,
+  },
 ]);
