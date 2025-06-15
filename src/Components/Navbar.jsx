@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router";
-
+import logo from '/public/logo.png'
 const Navbar = () => {
   const links = (
     <>
@@ -51,7 +51,7 @@ const Navbar = () => {
         </div>
         <Link className="hidden md:block" to='/'>
         <div className="flex gap-2 items-center justify-center cursor-pointer">
-        <img src="/public/logo.png" alt="" />
+        <img src={logo} alt="" />
         <p className="font-bold ml-2 text-xl">Prescription Point</p>
         </div>
         </Link>

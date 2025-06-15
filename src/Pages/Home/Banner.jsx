@@ -1,6 +1,8 @@
 
 import React from 'react';
 import { motion } from "motion/react"
+import banner1 from '/public/banner-img-1.png'
+
 const Banner = () => {
     return (
         <div className='w-10/12 mx-auto bg-[linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,1))]  border-3 border-white shadow sm rounded-xl mb-4 py-12 mt-18'>
@@ -33,10 +35,10 @@ const Banner = () => {
             {/* Banner section */}
             <div className="banner-container flex gap-4 justify-between items-center w-10/12 mx-auto">
                 <div className="left">
-                    <img src="/public/banner-img-1.png" alt="" />
+                    <img src={banner1} alt="" />
                 </div>
                 <div className="right">
-                <img src="/public/banner-img-1.png" alt="" />
+                <img src={banner1} alt="" />
                 </div>
             </div>
         </div>
